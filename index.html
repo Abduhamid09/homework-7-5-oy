@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-3">
+                <div class="card">
+                    <div class="card-body">
+                        <input type="number" id="a" class="form-control my-2" placeholder="SonA">
+                        <input type="number" id="b" class="form-control my-2" placeholder="SonB">
+                        <select id="amal" class="form-control my-2" onchange="TotalNumber()">
+                            <option hidden selected>amalni tanla</option>
+                            <option value="+">Qo'shish</option>
+                            <option value="-">Ayirish</option>
+                            <option value="*">Ko'paytirish</option>
+                            <option value="/">Bo'lish</option>
+                        </select>
+                        <button class="btn btn-info my-2" onclick="TotalNumber()">hisoblash</button>
+                    </div>
+                    <div class="card-footer">
+                        <p>
+                            Result <span id="result">0</span>
+                        </p>
+                    </div>
+                </div>
+                <div id="box"></div>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col-md-8 offset-2">
+                <div class="card">
+                    <div class="card-body">
+                        <input type="text" id="Firstname" class="form-control my-2" placeholder="First name">
+                        <input type="text" id="Lastname" class="form-control my-2" placeholder="Last name">
+                        <select id="oyin" class="form-control my-2" onchange="TotalNumber()">
+                            <option hidden selected> o'yinni tanla</option>
+                            <option value="UZ-EN">UZ-EN</option>
+                            <option value="UZ-RU">UZ-RU</option>
+                            <option value="UZ-IR">UZ-IR</option>
+                        </select>
+                        <input type="text" id="price" class="form-control my-2" placeholder="price">
+                        <button class="btn btn-success my-2" onclick="Buyticket()">chipta sotib olish</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8 offset-2">
+                <table class="table table-bordered table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>oyin</th>
+                            <th>price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        <tr></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
